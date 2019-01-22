@@ -1,0 +1,30 @@
+---
+advantages:
+  - name: "Afraid of (...) {I}"
+    description: "String fears affect the hero's actions. The trigger for such fears shouldn't be to uncommon. Examples include a fear of blood, magic, spiders, darkness, the sea, heights, open spaces, confined spaces, or the dead and undead. The GM has the final say as to whether a certain fear is permissible."
+    rules: "The hero suffers a level of Fear (see page 32 TDE.CR) for each level of this disadvantage whenever confronted with the trigger."
+    range: ""
+    actions: ""
+    prerequisites: "None"
+    ap_value: -8
+  - name: "Afraid of (...) {II}"
+    description: "String fears affect the hero's actions. The trigger for such fears shouldn't be to uncommon. Examples include a fear of blood, magic, spiders, darkness, the sea, heights, open spaces, confined spaces, or the dead and undead. The GM has the final say as to whether a certain fear is permissible."
+    rules: "The hero suffers a level of Fear (see page 32 TDE.CR) for each level of this disadvantage whenever confronted with the trigger."
+    range: ""
+    actions: ""
+    prerequisites: "None"
+    ap_value: -16
+  - name: "Afraid of (...) {III}"
+    description: "String fears affect the hero's actions. The trigger for such fears shouldn't be to uncommon. Examples include a fear of blood, magic, spiders, darkness, the sea, heights, open spaces, confined spaces, or the dead and undead. The GM has the final say as to whether a certain fear is permissible."
+    rules: "The hero suffers a level of Fear (see page 32 TDE.CR) for each level of this disadvantage whenever confronted with the trigger."
+    range: ""
+    actions: ""
+    prerequisites: "None"
+    ap_value: -24
+  - name: "Magical Restriction"
+    description: "In contrast with the advantage Magical Attunement, spellcasters with this disadvantage suffer penalties to magic skill checks when outside the stated environment. Spellcasters with Curse of Night, an especially common magical restriction, can use magic freely only during nighttime hours. Examples of other environments are listed below."
+    rules: "Spellcasters suffer no penalties to magic skill checks penalties to magic skill checks while in the stated environment, but suffers a penalty of 1 on all other environments."
+    range: ""
+    actions: ""
+    prerequisites: "Advantage Spellcaster"
+    ap_value: -30

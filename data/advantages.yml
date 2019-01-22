@@ -1,0 +1,30 @@
+---
+advantages:
+  - name: "Ambidextrous"
+    description: "Ambidextrous grants the hero the innate ability to use both hands with equal dexterity"
+    rules: "Heroes with this advantage suffer no penalties to skill checks for using their off hands. In combat, they do not suffer penalties for wielding weapons in their off hands (see page 238 TDE.CR)"
+    range: ""
+    actions: ""
+    prerequisites: "None"
+    ap_value: 15
+  - name: "Weapon Aptitude {B combat technique}"
+    description: "Heroes with Weapon Aptitude are especially talented with weapons and rarely make mistakes"
+    rules: "When making a roll with a combat technique, a Weapon Aptitude allows one re-roll on a confirmation roll for critical hits and botches."
+    range: ""
+    actions: ""
+    prerequisites: "None"
+    ap_value: 5
+  - name: "Weapon Aptitude {C combat technique}"
+    description: "Heroes with Weapon Aptitude are especially talented with weapons and rarely make mistakes"
+    rules: "When making a roll with a combat technique, a Weapon Aptitude allows one re-roll on a confirmation roll for critical hits and botches."
+    range: ""
+    actions: ""
+    prerequisites: "None"
+    ap_value: 10
+  - name: "Weapon Aptitude {D combat technique}"
+    description: "Heroes with Weapon Aptitude are especially talented with weapons and rarely make mistakes"
+    rules: "When making a roll with a combat technique, a Weapon Aptitude allows one re-roll on a confirmation roll for critical hits and botches."
+    range: ""
+    actions: ""
+    prerequisites: "None"
+    ap_value: 15
