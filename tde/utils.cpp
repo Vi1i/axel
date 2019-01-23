@@ -48,26 +48,31 @@ std::set<tde::race> tde::utils::parseRaces(std::string filename, std::set<tde::a
     YAML::Node file = YAML::LoadFile(filename);
     for(int record = 0; record < file["races"].size(); ++record) {
         auto name = file["races"][record]["name"].as<std::string>();
-        auto life_points = file["races"][record]["life_points"].as<std::string>();
-        auto spirit = file["races"][record]["spirit"].as<std::string>();
-        auto toughness = file["races"][record]["toughness"].as<std::string>();
-        auto movement = file["races"][record]["movement"].as<std::string>();
+        auto life_points = file["races"][record]["life_points"].as<int>();
+        auto spirit = file["races"][record]["spirit"].as<int>();
+        auto toughness = file["races"][record]["toughness"].as<int>();
+        auto movement = file["races"][record]["movement"].as<int>();
         auto maximums = file["races"][record]["maximums"].as<std::string>();
         std::set<tde::advantage> advs;
         for(int adv_record = 0; adv_record < file["races"][record]["advantages"].size(); ++adv_record) {
-            std::string adv_str(file["races"][record]["advantages"][adv_record].as<std::string>());
+            std::string adv_str(file["races"][record]["advantages"][adv_record]["name"].as<std::string>());
             for(auto const adv : advatages) {
                 if(adv == adv_str) {
                     advs.insert(adv);
                 }
             }
         }
-        std::set<tde::disadvantage> dis;
-//        for(int adv_record = 0; adv_record < file["races"][record]["disadvantages"].size(); ++adv_record) {
-//            dis_strs.insert(file["races"][record]["disadvantages"][adv_record].as<std::string>());
-//        }
-        auto ap_cost = file["races"][record]["ap_value"].as<int>();
-        races.insert(tde::race());
+        std::set<tde::disadvantage> diss;
+        for(int dis_record = 0; dis_record < file["races"][record]["disadvantages"].size(); ++dis_record) {
+            std::string dis_str(file["races"][record]["disadvantages"][dis_record]["name"].as<std::string>());
+            for(auto const dis : disadvantages) {
+                if(dis == dis_str) {
+                    diss.insert(dis);
+                }
+            }
+        }
+        auto ap_cost = file["races"][record]["ap_cost"].as<int>();
+        races.insert(tde::race(name, life_points, spirit, toughness, movement, maximums, advs, diss, ap_cost));
     }
     return races;
 }
