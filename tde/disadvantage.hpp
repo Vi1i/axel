@@ -27,6 +27,14 @@ namespace tde {
         bool operator<(const disadvantage& rhs) const {
             return this->name_ < rhs.name_;
         }
+
+        bool operator==(const disadvantage& rhs) const {
+            return this->name_ == rhs.name_;
+        }
+
+        bool operator==(const std::string& rhs) const {
+            return this->name_ == rhs;
+        }
     };
 }
 #endif //AXEL_TDE_DISADVANTAGE_HPP
