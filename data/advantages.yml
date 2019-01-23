@@ -28,3 +28,10 @@ advantages:
     actions: ""
     prerequisites: "None"
     ap_value: 15
+  - name: "Spellcaster"
+    description: "On Dere, the gift of magic must be inborn. Only characters with this advantage receive arcane energy and possess the talent needed to cast spells and perform magical actions"
+    rules: "The spellcaster receives an arcane energy base stat of 20 AE. This advantage doesn't include the special ability Tradition (see page 274 TDE.CR), which you must purchase separately. All Spellcasters must start the game with a Tradition. You cannot purchase this advantage later in the game."
+    range: ""
+    actions: ""
+    prerequisites: "None"
+    ap_value: 25
