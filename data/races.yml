@@ -1,47 +1,47 @@
 ---
-  races:
-    - name: "Human"
-      life_points: 5
-      spirit: -5
-      toughness: -5
-      movement: 8
-      maximums: "any one +1"
-      advantages:
-        - name: "none"
-      disadvantages:
-        - name: "none"
-      ap_cost: 0
-    - name: "Elf"
-      life_points: 2
-      spirit: -4
-      toughness: -6
-      movement: 8
-      maximums: "INI and AGI +1;SGC or STR -2"
-      advantages:
-        - name: "Spellcaster"
-        - name: "Two-Voiced Singing"
-      disadvantages:
-        - name: "none"
-      ap_cost: 18
-    - name: "Half Elf"
-      life_points: 5
-      spirit: -4
-      toughness: -6
-      movement: 8
-      maximums: "any one +1"
-      advantages:
-        - name: "none"
-      disadvantages:
-        - name: "none"
-      ap_cost: 0
-    - name: "Dwarf"
-      life_points: 8
-      spirit: -4
-      toughness: -4
-      movement: 6
-      maximums: "CON and STR +1;CHA or AGI -2"
-      advantages:
-        - name: "none"
-      disadvantages:
-        - name: "none"
-      ap_cost: 61
+races:
+  - name: "Human"
+    life_points: 5
+    spirit: -5
+    toughness: -5
+    movement: 8
+    maximums: "any one +1"
+    advantages:
+      - name: "none"
+    disadvantages:
+      - name: "none"
+    ap_cost: 0
+  - name: "Elf"
+    life_points: 2
+    spirit: -4
+    toughness: -6
+    movement: 8
+    maximums: "INI and AGI +1;SGC or STR -2"
+    advantages:
+      - name: "Spellcaster"
+      - name: "Two-Voiced Singing"
+    disadvantages:
+      - name: "none"
+    ap_cost: 18
+  - name: "Half Elf"
+    life_points: 5
+    spirit: -4
+    toughness: -6
+    movement: 8
+    maximums: "any one +1"
+    advantages:
+      - name: "none"
+    disadvantages:
+      - name: "none"
+    ap_cost: 0
+  - name: "Dwarf"
+    life_points: 8
+    spirit: -4
+    toughness: -4
+    movement: 6
+    maximums: "CON and STR +1;CHA or AGI -2"
+    advantages:
+      - name: "none"
+    disadvantages:
+      - name: "none"
+    ap_cost: 61

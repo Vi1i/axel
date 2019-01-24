@@ -7,7 +7,7 @@
 tde::race::race(const std::string &name, int life_points,
      int spirit, int toughness,
      int movement, const std::string &maximums,
-     const std::set<advantage> &advantages, const std::set<disadvantage> &disadvantages,
+     const std::set<std::string> &advantages, const std::set<std::string> &disadvantages,
      int ap_cost) :
         name_(name), life_points_(life_points),
         spirit_(spirit), toughness_(toughness),
@@ -39,11 +39,11 @@ const std::string &tde::race::getMaximums() const {
     return this->maximums_;
 }
 
-const std::set<tde::advantage> &tde::race::getAdvantages() const {
+const std::set<std::string> &tde::race::getAdvantages() const {
     return this->advantages_;
 }
 
-const std::set<tde::disadvantage> &tde::race::getDisadvantages() const {
+const std::set<std::string> &tde::race::getDisadvantages() const {
     return this->disadvantages_;
 }
 

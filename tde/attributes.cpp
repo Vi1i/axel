@@ -57,3 +57,12 @@ void tde::attributes::setAttribute(tde::attributes::type attr, int attr_val) {
             break;
     }
 }
+
+tde::attributes::attributes(int courage, int sagacity,
+                            int intuition, int charisma,
+                            int dexterity, int agility,
+                            int constitution, int strength)
+                            : courage_(courage), sagacity_(sagacity),
+                              intuition_(intuition), charisma_(charisma),
+                              dexterity_(dexterity), agility_(agility),
+                              constitution_(constitution), strength_(strength) {}

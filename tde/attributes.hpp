@@ -27,6 +27,13 @@ namespace tde {
             STRENGTH,
         };
 
+        attributes() = default;
+
+        attributes(int courage, int sagacity,
+                   int intuition, int charisma,
+                   int dexterity, int agility,
+                   int constitution, int strength);
+
         int getAttribute(tde::attributes::type attr) const;
         void setAttribute(tde::attributes::type attr, int attr_val);
     };

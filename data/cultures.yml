@@ -1,0 +1,40 @@
+---
+cultures:
+  - name: "Andergastan"
+    type: "Human"
+    skills:
+    - name: "Woodworking"
+      bonus: 2
+    - name: "Orienting"
+      bonus: 1
+    - name: "Plant Lore"
+      bonus: 1
+    - name: "Myths & Legends"
+      bonus: 1
+    - name: "Animal Lore"
+      bonus: 1
+    - name: "Survival"
+      bonus: 2
+    ap_cost: 20
+  - name: "Aranian"
+    type: "Human"
+    skills:
+    - name: "Seduction"
+      bonus: 1
+    - name: "Gambling"
+      bonus: 1
+    - name: "Streetwise"
+      bonus: 2
+    - name: "Commerce"
+      bonus: 2
+    - name: "Empathy"
+      bonus: 1
+    - name: "Math"
+      bonus: 2
+    - name: "Myths & Legends"
+      bonus: 1
+    - name: "Clothworking"
+      bonus: 1
+    - name: "Fast-Talk"
+      bonus: 2
+    ap_cost: 26
