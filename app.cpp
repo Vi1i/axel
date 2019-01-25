@@ -6,16 +6,27 @@
 #include "tde/disadvantage.hpp"
 #include "tde/utils.hpp"
 #include "tde/culture.hpp"
+#include "gui/mainwidget.hpp"
 
 #include <cstdlib>
 #include <set>
 #include <string>
 #include <iostream>
 
+#include <QtWidgets>
+
 int main(int argc, char * argv[]) {
     if(argc != 2) {
         return EXIT_FAILURE;
     }
+
+    // Creates an instance of QApplication
+    QApplication a(argc, argv);
+    // This is our MainWidget class containing our GUI and functionality
+    axel::gui::mainwidget w;
+    w.show(); // Show main window
+    // run the application and return execs() return value/code
+    return a.exec();
 
     std::string data_dir = argv[1];
     std::string advantages_filename = data_dir + "/advantages.yml";
