@@ -2,39 +2,196 @@
 cultures:
   - name: "Andergastan"
     type: "Human"
-    skills:
-    - name: "Woodworking"
-      bonus: 2
-    - name: "Orienting"
-      bonus: 1
-    - name: "Plant Lore"
-      bonus: 1
-    - name: "Myths & Legends"
-      bonus: 1
-    - name: "Animal Lore"
-      bonus: 1
-    - name: "Survival"
-      bonus: 2
-    ap_cost: 20
+    language: "Garethi"
+    script: "Kuslik Signs (2 AP)"
+    area_knowledge: "(for example, Andergast-Town, Joborn)"
+    social_status: "Noble, Not Free"
+    common_professions:
+      mundane:
+        - "all but Gladiator and Tribal Warrior"
+      magic:
+        - "Witch"
+        - "Mage"
+      blessed:
+        - "Blessed One of Boron"
+        - "Blessed One of Hesinde"
+        - "Blessed One of Praios"
+        - "Blessed One of Peraine"
+        - "Blessed One of Phex"
+        - "Blessed One of Rondra"
+    common_advantages:
+      - "Direction Sense"
+      - "Rugged Fighter"
+    common_disadvantages:
+      - "Negative Trait (Superstitious)"
+      - "Personality Flaw (Prejudices - usually against Nostrians and women; Unworldly – usually Progress and Life outside the kingdom)"
+    uncommon_advantages:
+      - "Socially Adaptable"
+    uncommon_disadvantages:
+      - "Susceptible to Disease"
+    common_skills:
+      - "Animal Lore"
+      - "Myths & Legends"
+      - "Plant Lore"
+      - "Orienting"
+      - "Survival"
+      - "Woodworking"
+    uncommon_skills:
+      - "Flying"
+      - "Geography"
+      - "History"
+      - "Law"
+      - "Math"
+      - "Mechanics"
+      - "Religions"
+    common_names:
+      male:
+        - "Arnbold"
+        - "Borkhelm"
+        - "Gartwald"
+        - "Ludewich"
+        - "Marik"
+        - "Oakward"
+        - "Strammgert"
+        - "Wendolyn"
+        - "Wenzelaus"
+        - "Zoltan"
+      female:
+        - "Berga"
+        - "Domela"
+        - "Ernka"
+        - "Hadwiga"
+        - "Irmela"
+        - "Larja"
+        - "Marmelunde"
+        - "Treshka"
+        - "Wendeline"
+      family_names:
+        - "Alrikshuber"
+        - "Barkmaster"
+        - "Hatcheter"
+        - "Cowfarmer"
+        - "Marketfarmer"
+        - "Oakinger"
+        - "Saddlehuber"
+        - "Swineherd"
+        - "Woodgood"
+        - "Zibbelbert"
+      noble_families:
+        - "of Anderstone"
+        - "of Barkfield"
+        - "of Pawstone"
+        - "of Stonetree"
+        - "of Teshkal"
+    package:
+      skills:
+      - name: "Woodworking"
+        bonus: 2
+      - name: "Orienting"
+        bonus: 1
+      - name: "Plant Lore"
+        bonus: 1
+      - name: "Myths & Legends"
+        bonus: 1
+      - name: "Animal Lore"
+        bonus: 1
+      - name: "Survival"
+        bonus: 2
+      ap_cost: 20
   - name: "Aranian"
     type: "Human"
-    skills:
-    - name: "Seduction"
-      bonus: 1
-    - name: "Gambling"
-      bonus: 1
-    - name: "Streetwise"
-      bonus: 2
-    - name: "Commerce"
-      bonus: 2
-    - name: "Empathy"
-      bonus: 1
-    - name: "Math"
-      bonus: 2
-    - name: "Myths & Legends"
-      bonus: 1
-    - name: "Clothworking"
-      bonus: 1
-    - name: "Fast-Talk"
-      bonus: 2
-    ap_cost: 26
+    language: "Tulamidya (Aranian) or Garethi (Aretya)"
+    script: "Tulamidya or Kuslik Signs (2 AP)"
+    area_knowledge: "depending on home region (for example, Baburin, Elburum, Llanka, Palmyrabad, Zorgan)"
+    social_status: "Noble, Not Free"
+    common_professions:
+      mundane:
+        - "all but Gladiator, Knight, and Tribal Warrior"
+      magic:
+        - "Witch (mostly Cat Witches)"
+        - "Mage (rare)"
+      blessed:
+        - "Blessed One of Boron"
+        - "Blessed One of Hesinde"
+        - "Blessed One of Praios"
+        - "Blessed One of Peraine"
+        - "Blessed One of Phex"
+        - "Blessed One of Rondra"
+    common_advantages:
+      - "Aptitude in Social Skills"
+      - "Sense of Range"
+    common_disadvantages:
+      - "Negative Trait (Superstition)"
+      - "Personality Flaw (Prejudices - mostly against Novadis and mages; Vanity)"
+      - "Sensitive to Pain"
+    uncommon_advantages:
+      - "Resistant to Cold"
+    uncommon_disadvantages:
+      - "Frenzy"
+    common_skills:
+      - "Artistic Ability"
+      - "Astronomy"
+      - "Clothworking"
+      - "Commerce"
+      - "Empathy"
+      - "Fast-Talk"
+      - "Gambling"
+      - "Law"
+      - "Math"
+      - "Myths & Legends"
+      - "Pickpocket"
+      - "Riding"
+      - "Seduction"
+      - "Streetwise"
+    uncommon_skills:
+      - "Intimidation"
+      - "Survival"
+      - "Tracking"
+    common_names:
+      male:
+        - "Assaf"
+        - "Djafardeon"
+        - "Eslam"
+        - "Faizal"
+        - "Kazan"
+        - "Mahdul"
+        - "Marwamir"
+        - "Nazir"
+        - "Seychaban"
+        - "Zahir"
+      female:
+        - "Aishanka"
+        - "Belima"
+        - "Delilah"
+        - "Harizeth"
+        - "Majula"
+        - "Neraida"
+        - "Rhayadaque"
+        - "Shilaldara"
+        - "Yamira"
+        - "Zulhaminai"
+      family_names:
+        - "Names are connected to the name of the mother or father, with ibn for men and saba or -sunni for women (for example, Yamira saba Delihah, Belima Majulasunni, or Assaf ibn Eslam)."
+      noble_families:
+        - "Names are connected to the name of the mother or father, with ibn for men and saba or -sunni for women (for example, Yamira saba Delihah, Belima Majulasunni, or Assaf ibn Eslam)."
+    package:
+      skills:
+      - name: "Seduction"
+        bonus: 1
+      - name: "Gambling"
+        bonus: 1
+      - name: "Streetwise"
+        bonus: 2
+      - name: "Commerce"
+        bonus: 2
+      - name: "Empathy"
+        bonus: 1
+      - name: "Math"
+        bonus: 2
+      - name: "Myths & Legends"
+        bonus: 1
+      - name: "Clothworking"
+        bonus: 1
+      - name: "Fast-Talk"
+        bonus: 2
+      ap_cost: 26

@@ -14,6 +14,8 @@ namespace tde {
     class culture {
         std::string name_;
         std::string type_;
+        std::string language_;
+        std::string script_;
         std::map<std::string, int> skills_;
         int ap_cost_;
 
