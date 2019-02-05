@@ -6,8 +6,9 @@
 #define AXEL_TDE_ADVANTAGE_HPP
 
 #include <string>
+#include <memory>
 
-namespace tde {
+namespace axel { namespace tde {
     class advantage {
         std::string name_;
         std::string description_;
@@ -18,23 +19,26 @@ namespace tde {
         int ap_value_;
 
     public:
-        advantage() = default;
-        advantage(const std::string &name, const std::string &description,
-                  const std::string &rules, const std::string &range,
-                  const std::string &actions, const std::string &prerequisites,
-                  int ap_value);
+        struct data {
+            std::string name;
+            std::string description;
+            std::string rules;
+            std::string range;
+            std::string actions;
+            std::string prerequisites;
+            int ap_value;
+        };
 
-        bool operator<(const advantage& rhs) const {
-            return this->name_ < rhs.name_;
-        }
+        auto getName() -> std::string;
+        auto getDescription() -> std::string;
+        auto getRules() -> std::string;
+        auto getRange() -> std::string;
+        auto getActions() -> std::string;
+        auto getPrerequisites() -> std::string;
+        auto getApValue() -> int;
 
-        bool operator==(const advantage& rhs) const {
-            return this->name_ == rhs.name_;
-        }
-
-        bool operator==(const std::string& rhs) const {
-            return this->name_ == rhs;
-        }
+        advantage(struct axel::tde::advantage::data);
+        ~advantage();
     };
-}
+}}
 #endif //AXEL_TDE_ADVANTAGE_HPP
