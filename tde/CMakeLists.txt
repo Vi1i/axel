@@ -22,7 +22,7 @@ add_library(Axel SHARED
         skill.cpp
         skill.hpp
         character.cpp
-        character.hpp)
+        character.hpp data.hpp)
 
 target_link_libraries(Axel
         ${YAML_CPP_LIBRARIES}
