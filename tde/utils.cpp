@@ -9,22 +9,24 @@
 #include "culture.hpp"
 
 #include <set>
+#include <vector>
 
 #include <yaml-cpp/yaml.h>
 #include <iostream>
 
-std::set<tde::advantage> tde::utils::parseAdvantages(std::string filename) {
-    std::set<tde::advantage> advatages;
+std::vector<axel::tde::advantage> tde::utils::parseAdvantages(std::string filename) {
+    std::vector<axel::tde::advantage> advatages;
     YAML::Node file = YAML::LoadFile(filename);
     for(int record = 0; record < file["advantages"].size(); ++record) {
-        auto name = file["advantages"][record]["name"].as<std::string>();
-        auto description = file["advantages"][record]["description"].as<std::string>();
-        auto rules = file["advantages"][record]["rules"].as<std::string>();
-        auto range = file["advantages"][record]["range"].as<std::string>();
-        auto actions = file["advantages"][record]["actions"].as<std::string>();
-        auto prerequisites = file["advantages"][record]["prerequisites"].as<std::string>();
-        auto ap_value = file["advantages"][record]["ap_value"].as<int>();
-        advatages.insert(tde::advantage(name, description, rules, range, actions, prerequisites, ap_value));
+        struct axel::tde::advantage::data datum;
+        datum.name = file["advantages"][record]["name"].as<std::string>();
+        datum.description = file["advantages"][record]["description"].as<std::string>();
+        datum.rules = file["advantages"][record]["rules"].as<std::string>();
+        datum.range = file["advantages"][record]["range"].as<std::string>();
+        datum.actions = file["advantages"][record]["actions"].as<std::string>();
+        datum.prerequisites = file["advantages"][record]["prerequisites"].as<std::string>();
+        datum.ap_value = file["advantages"][record]["ap_value"].as<int>();
+        advatages.push_back(axel::tde::advantage(datum));
     }
     return advatages;
 }
@@ -45,7 +47,7 @@ std::set<tde::disadvantage> tde::utils::parseDisadvantages(std::string filename)
     return disadvantages;
 }
 
-std::set<tde::race> tde::utils::parseRaces(std::string filename, std::set<tde::advantage> advatages, std::set<tde::disadvantage> disadvantages) {
+std::set<tde::race> tde::utils::parseRaces(std::string filename, std::vector<axel::tde::advantage> advatages, std::set<tde::disadvantage> disadvantages) {
     std::set<tde::race> races;
     YAML::Node file = YAML::LoadFile(filename);
 
