@@ -4,65 +4,44 @@
 
 #include "attributes.hpp"
 
-int tde::attributes::getAttribute(tde::attributes::type attr) const {
-    switch(attr) {
-        case tde::attributes::type::COURAGE:
-            return this->courage_;
-        case tde::attributes::type::SAGACITY:
-            return this->sagacity_;
-        case tde::attributes::type::INTUITION:
-            return this->intuition_;
-        case tde::attributes::type::CHARISMA:
-            return this->charisma_;
-        case tde::attributes::type::DEXTERITY:
-            return this->dexterity_ ;
-        case tde::attributes::type::AGILITY:
-            return this->agility_;
-        case tde::attributes::type::CONSTITUTION:
-            return this->constitution_;
-        case tde::attributes::type::STRENGTH:
-            return this->strength_;
-        default:
-            break;
-    }
+axel::tde::attributes::attributes(struct axel::tde::attributes::data datum) :
+                            courage_(datum.courage),
+                            sagacity_(datum.sagacity),
+                            intuition_(datum.intuition),
+                            charisma_(datum.charisma),
+                            dexterity_(datum.dexterity),
+                            agility_(datum.agility),
+                            constitution_(datum.constitution),
+                            strength_(datum.strength) {}
+
+auto axel::tde::attributes::getCourage() -> int {
+    return courage_;
 }
 
-void tde::attributes::setAttribute(tde::attributes::type attr, int attr_val) {
-    switch(attr) {
-        case tde::attributes::type::COURAGE:
-            this->courage_ = attr_val;
-            break;
-        case tde::attributes::type::SAGACITY:
-            this->sagacity_ = attr_val;
-            break;
-        case tde::attributes::type::INTUITION:
-            this->intuition_ = attr_val;
-            break;
-        case tde::attributes::type::CHARISMA:
-            this->charisma_ = attr_val;
-            break;
-        case tde::attributes::type::DEXTERITY:
-            this->dexterity_ = attr_val;
-            break;
-        case tde::attributes::type::AGILITY:
-            this->agility_ = attr_val;
-            break;
-        case tde::attributes::type::CONSTITUTION:
-            this->constitution_ = attr_val;
-            break;
-        case tde::attributes::type::STRENGTH:
-            this->strength_ = attr_val;
-            break;
-        default:
-            break;
-    }
+auto axel::tde::attributes::getSagacity() -> int {
+    return sagacity_;
 }
 
-tde::attributes::attributes(int courage, int sagacity,
-                            int intuition, int charisma,
-                            int dexterity, int agility,
-                            int constitution, int strength)
-                            : courage_(courage), sagacity_(sagacity),
-                              intuition_(intuition), charisma_(charisma),
-                              dexterity_(dexterity), agility_(agility),
-                              constitution_(constitution), strength_(strength) {}
+auto axel::tde::attributes::getIntuition() -> int {
+    return intuition_;
+}
+
+auto axel::tde::attributes::getCharisma() -> int {
+    return charisma_;
+}
+
+auto axel::tde::attributes::getDexterity() -> int {
+    return dexterity_;
+}
+
+auto axel::tde::attributes::getAgility() -> int {
+    return agility_;
+}
+
+auto axel::tde::attributes::getConstitution() -> int {
+    return constitution_;
+}
+
+auto axel::tde::attributes::getStrength() -> int {
+    return strength_;
+}

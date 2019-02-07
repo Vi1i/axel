@@ -106,22 +106,23 @@ std::set<tde::skill> tde::utils::parseSkills(std::string filename) {
     return skills;
 }
 
-std::set<tde::culture> tde::utils::parseCultures(std::string filename) {
-    std::set<tde::culture> cultures;
+std::set<axel::tde::culture> tde::utils::parseCultures(std::string filename) {
+    std::set<axel::tde::culture> cultures;
     YAML::Node file = YAML::LoadFile(filename);
 
     for(int record = 0; record < file["cultures"].size(); ++record) {
-        auto name = file["cultures"][record]["name"].as<std::string>();
-        auto type = file["cultures"][record]["type"].as<std::string>();
+        axel::tde::culture::data datum;
+        datum.name = file["cultures"][record]["name"].as<std::string>();
+        datum.type = file["cultures"][record]["type"].as<std::string>();
         std::map<std::string, int> skills;
         for(int adv_record = 0; adv_record < file["races"][record]["skills"].size(); ++adv_record) {
             auto app_str(file["cultures"][record]["skills"][adv_record]["name"].as<std::string>());
             auto app_bonus(file["cultures"][record]["skills"][adv_record]["bonus"].as<int>());
-            skills.insert(std::pair<std::string, int>(app_str, app_bonus));
+            datum.package.insert(std::pair<std::string, int>(app_str, app_bonus));
         }
-        auto ap_cost = file["cultures"][record]["ap_cost"].as<int>();
+        datum.package_ap_cost = file["cultures"][record]["ap_cost"].as<int>();
 
-        cultures.insert(tde::culture(name, type, skills, ap_cost));
+        cultures.insert(axel::tde::culture(axel::tde::culture::));
     }
 
 

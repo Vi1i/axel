@@ -5,7 +5,7 @@
 #include "character.hpp"
 
 tde::character::character(const std::string &name, const std::string &race,
-                          const std::string &culture, const tde::attributes &attributes)
+                          const std::string &culture, const axel::tde::attributes &attributes)
                           : race_(race), culture_(culture),
                             attributes_(attributes) {}
 
@@ -17,7 +17,7 @@ const std::string &tde::character::getCulture() const {
     return this->culture_;
 }
 
-const tde::attributes &tde::character::getAttributes() const {
+const axel::tde::attributes &tde::character::getAttributes() const {
     return this->attributes_;
 }
 

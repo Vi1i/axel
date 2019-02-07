@@ -19,18 +19,18 @@ namespace tde {
 
         std::string race_;
         std::string culture_;
-        tde::attributes attributes_;
+        axel::tde::attributes attributes_;
         std::map<std::string, int> advantages_;
         std::map<std::string, int> disadvantages_;
         std::map<std::string, int> special_abilities_;
 
     public:
         character(const std::string &name, const std::string &race,
-                  const std::string &culture, const tde::attributes &attributes);
+                  const std::string &culture, const axel::tde::attributes &attributes);
 
         const std::string &getRace() const;
         const std::string &getCulture() const;
-        const attributes &getAttributes() const;
+        const axel::tde::attributes &getAttributes() const;
         const std::map<std::string, int> &getAdvantages() const;
         const std::map<std::string, int> &getDisadvantages() const;
         const std::map<std::string, int> &getSpecialAbilities() const;

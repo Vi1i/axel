@@ -20,13 +20,13 @@ int main(int argc, char * argv[]) {
         return EXIT_FAILURE;
     }
 
-    // Creates an instance of QApplication
-    QApplication a(argc, argv);
-    // This is our MainWidget class containing our GUI and functionality
-    axel::gui::mainwidget w;
-    w.show(); // Show main window
-    // run the application and return execs() return value/code
-    return a.exec();
+//    // Creates an instance of QApplication
+//    QApplication a(argc, argv);
+//    // This is our MainWidget class containing our GUI and functionality
+//    axel::gui::mainwidget w;
+//    w.show(); // Show main window
+//    // run the application and return execs() return value/code
+//    return a.exec();
 
     std::string data_dir = argv[1];
     std::string advantages_filename = data_dir + "/advantages.yml";
@@ -41,7 +41,7 @@ int main(int argc, char * argv[]) {
     db.races = tde::utils::parseRaces(races_filename, db.advantages, db.disadvantages);
     db.skills = tde::utils::parseSkills(skills_filename);
     db.cultures = tde::utils::parseCultures(cultures_filename);
-    tde::attributes attr(8, 8, 8 ,8, 8, 8, 8, 8);
+    axel::tde::attributes attr(axel::tde::attributes::data{8, 8, 8 ,8, 8, 8, 8, 8});
     tde::character character("Bob", "Human", "Andergastan", attr);
 
     std::cout << tde::utils::calcCharApCost(db, character) << std::endl;
