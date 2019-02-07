@@ -5,7 +5,7 @@
 #ifndef AXEL_TDE_ATTRIBUTES_HPP
 #define AXEL_TDE_ATTRIBUTES_HPP
 
-namespace tde {
+namespace axel { namespace tde {
     class attributes {
         int courage_;
         int sagacity_;
@@ -15,27 +15,29 @@ namespace tde {
         int agility_;
         int constitution_;
         int strength_;
+
     public:
-        enum type {
-            COURAGE,
-            SAGACITY,
-            INTUITION,
-            CHARISMA,
-            DEXTERITY,
-            AGILITY,
-            CONSTITUTION,
-            STRENGTH,
+        struct data {
+            int courage;
+            int sagacity;
+            int intuition;
+            int charisma;
+            int dexterity;
+            int agility;
+            int constitution;
+            int strength;
         };
 
-        attributes() = default;
+        auto getCourage() -> int;
+        auto getSagacity() -> int;
+        auto getIntuition() -> int;
+        auto getCharisma() -> int;
+        auto getDexterity() -> int;
+        auto getAgility() -> int;
+        auto getConstitution() -> int;
+        auto getStrength() -> int;
 
-        attributes(int courage, int sagacity,
-                   int intuition, int charisma,
-                   int dexterity, int agility,
-                   int constitution, int strength);
-
-        int getAttribute(tde::attributes::type attr) const;
-        void setAttribute(tde::attributes::type attr, int attr_val);
+        attributes(struct axel::tde::attributes::data);
     };
-}
+}}
 #endif //AXEL_TDE_ATTRIBUTES_HPP
